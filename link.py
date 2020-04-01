@@ -15,5 +15,18 @@ def link():
     driver.close()
 
 
+def imdb_help_link():
+    driver = webdriver.Chrome(executable_path='D:/02_VSCode_Python/Selenium_Automation/chromedriver')
+    driver.get("https:/www.imdb.com")
+    driver.maximize_window()
+    time.sleep(1)
+    driver.find_element_by_xpath("//a[@href='/registration/signin?ref=nv_generic_lgin']").click()
+    time.sleep(3)
+    driver.close()
+
+
+
 if __name__ == '__main__':
     link()
+    time.sleep(1)
+    imdb_help_link()
